@@ -1,0 +1,62 @@
+name: Midea PortaSplit Verfuegbarkeit
+
+on:
+  schedule:
+    # Alle 5 Minuten (UTC) - das ist das Minimum, das GitHub Actions erlaubt.
+    # Cron laeuft nicht immer exakt puenktlich und wird bei hoher Last auch
+    # mal uebersprungen - das ist normal.
+    - cron: "*/5 * * * *"
+  workflow_dispatch: {}   # erlaubt manuelles Starten ueber den Actions-Tab
+
+permissions:
+  contents: write          # noetig, um state.json zurueckzuschreiben
+
+concurrency:
+  group: portasplit-check
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Python einrichten
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Abhaengigkeiten installieren
+        run: pip install -r requirements.txt
+
+      - name: Verfuegbarkeit pruefen
+        id: check
+        run: python checker.py
+
+      - name: E-Mail senden (nur wenn verfuegbar)
+        if: steps.check.outputs.available == 'true'
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          secure: true
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          subject: ${{ steps.check.outputs.subject }}
+          from: PortaSplit Bot <${{ secrets.MAIL_USERNAME }}>
+          to: ${{ secrets.MAIL_TO }}
+          body: file://mail_body.txt
+          html_body: false
+
+      - name: Zustand zuruckschreiben
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add state.json
+          if git diff --staged --quiet; then
+            echo "Kein Zustands-Update noetig."
+          else
+            git commit -m "Zustand aktualisiert [skip ci]"
+            git push
+          fi

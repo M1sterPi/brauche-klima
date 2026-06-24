@@ -1,0 +1,58 @@
+{
+  "product_name": "Midea PortaSplit",
+  "_comment": "Trage hier die KONKRETEN Produktseiten-URLs ein, die du beobachten willst. Pro Eintrag wird die Seite geladen und der Text auf die Schluesselwoerter geprueft. 'available_keywords' = Text, der NUR bei Verfuegbarkeit erscheint (z.B. 'In den Warenkorb'). 'unavailable_keywords' = Text, der bei NICHT-Verfuegbarkeit erscheint. Du kannst pro Eintrag eigene Keywords setzen, sonst gelten die globalen 'defaults'.",
+
+  "defaults": {
+    "available_keywords": [
+      "in den warenkorb",
+      "in den einkaufswagen",
+      "sofort lieferbar",
+      "auf lager",
+      "jetzt kaufen",
+      "lieferbar"
+    ],
+    "unavailable_keywords": [
+      "nicht verfügbar",
+      "derzeit nicht verfügbar",
+      "ausverkauft",
+      "nicht lieferbar",
+      "nicht auf lager",
+      "vergriffen",
+      "benachrichtigen sobald verfügbar",
+      "vorübergehend nicht"
+    ]
+  },
+
+  "targets": [
+    {
+      "name": "OBI - Midea PortaSplit",
+      "shop": "OBI",
+      "url": "https://www.obi.de/search/midea%20portasplit/"
+    },
+    {
+      "name": "Hornbach - Midea PortaSplit",
+      "shop": "Hornbach",
+      "url": "https://www.hornbach.de/s/midea%20portasplit"
+    },
+    {
+      "name": "Bauhaus - Midea PortaSplit",
+      "shop": "Bauhaus",
+      "url": "https://www.bauhaus.info/suche/produkte?text=midea%20portasplit"
+    },
+    {
+      "name": "Otto - Midea PortaSplit",
+      "shop": "Otto",
+      "url": "https://www.otto.de/suche/midea%20portasplit/"
+    },
+    {
+      "name": "Amazon - Midea PortaSplit",
+      "shop": "Amazon",
+      "url": "https://www.amazon.de/s?k=midea+portasplit"
+    },
+    {
+      "name": "Idealo - Midea PortaSplit",
+      "shop": "Idealo",
+      "url": "https://www.idealo.de/preisvergleich/MainSearchProductCategory.html?q=midea+portasplit"
+    }
+  ]
+}

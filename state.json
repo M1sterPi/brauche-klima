@@ -1,0 +1,32 @@
+{
+  "https://www.obi.de/search/midea%20portasplit/": {
+    "available": true,
+    "name": "OBI - Midea PortaSplit",
+    "shop": "OBI"
+  },
+  "https://www.hornbach.de/s/midea%20portasplit": {
+    "available": null,
+    "name": "Hornbach - Midea PortaSplit",
+    "shop": "Hornbach"
+  },
+  "https://www.bauhaus.info/suche/produkte?text=midea%20portasplit": {
+    "available": null,
+    "name": "Bauhaus - Midea PortaSplit",
+    "shop": "Bauhaus"
+  },
+  "https://www.otto.de/suche/midea%20portasplit/": {
+    "available": true,
+    "name": "Otto - Midea PortaSplit",
+    "shop": "Otto"
+  },
+  "https://www.amazon.de/s?k=midea+portasplit": {
+    "available": null,
+    "name": "Amazon - Midea PortaSplit",
+    "shop": "Amazon"
+  },
+  "https://www.idealo.de/preisvergleich/MainSearchProductCategory.html?q=midea+portasplit": {
+    "available": null,
+    "name": "Idealo - Midea PortaSplit",
+    "shop": "Idealo"
+  }
+}
