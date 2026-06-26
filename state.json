@@ -15,12 +15,12 @@
     "shop": "Bauhaus"
   },
   "https://www.otto.de/suche/midea%20portasplit/": {
-    "available": true,
+    "available": false,
     "name": "Otto - Midea PortaSplit",
     "shop": "Otto"
   },
   "https://www.amazon.de/s?k=midea+portasplit": {
-    "available": false,
+    "available": null,
     "name": "Amazon - Midea PortaSplit",
     "shop": "Amazon"
   },
