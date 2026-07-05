@@ -20,7 +20,7 @@
     "shop": "Otto"
   },
   "https://www.amazon.de/s?k=midea+portasplit": {
-    "available": false,
+    "available": null,
     "name": "Amazon - Midea PortaSplit",
     "shop": "Amazon"
   },
