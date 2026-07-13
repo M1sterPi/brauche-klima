@@ -15,7 +15,7 @@
     "shop": "Bauhaus"
   },
   "https://www.otto.de/suche/midea%20portasplit/": {
-    "available": false,
+    "available": true,
     "name": "Otto - Midea PortaSplit",
     "shop": "Otto"
   },
